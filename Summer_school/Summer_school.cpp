@@ -1,35 +1,43 @@
-﻿#include <iostream>
-#include <cassert>
-#include <limits>
+﻿#include "Summer_school.h"
 
-/// <summary>
-/// Результат решения квадратного уравнения при бесконечном количестве корней.
-/// </summary>
-const short int INF_SOLVE = -1;
+/*!
+    * Решение квадратного уравнения
+*/
+int main() {
+    double a = 0;
+    double b = 0;
+    double c = 0;
+    double x1 = 0;
+    double x2 = 0;
+    
+    int res_input = InputParams(&a, &b, &c);
+    if (res_input == CODE_ERROR) {
+        return CODE_ERROR;
+    }
 
-/// <summary>
-/// Погрешност при сравнении double.
-/// </summary>
-const double EPSILON = 1e-5;
+    int nRoots = SolveSquare(a, b, c, &x1, &x2);
+
+    OutputRoots(&nRoots, &x1, &x2);
+
+    return 0;
+}
 
 /**
     * Функция для проверки равенства переменных double типов.
-    * Входные данные: double, double.
-    * Выходные данные: bool.
-    * true, если равны; false, если не равны. С учетом EPSILON
+    * \return true - если числа равны
+    * \return false - если числа не равны
 */
-
-bool is_equal(double x, double y) {    
-    return std::fabs(x - y) < EPSILON;
+bool is_equal(double x /*!< - Первое число*/, double y /*!< - Второе число */) {
+    return fabs(x - y) < EPSILON;
 }
 
 /*!
     * Функция для решения квадратного уравнения.
-    * Входные данные: double, double, double, double *, double *
-    * Выходные данные: bool(true, если равны; false, если не равны)
-    * На вход подаются коэффиценты квадратного уравения и указатели на переменные для хранения корней. Функция возвращает количество корней уравнения.
+    * \return Количество корней
 */
-short int SolveSquare(double a, double b, double c, double *x1, double *x2) {
+int SolveSquare(double a /*!< -Коэффицент при старшей степени */, double b/*!< - Коэффицент при x*/, 
+    double c/*!< - Свободный член */, double* x1/*!< - Указатель для хранения 1-го корня */, double* x2/*!< - Указатель для хранения 2-го корня */) {
+
     assert(x1 != nullptr && x2 != nullptr);
     assert(isfinite(a) && isfinite(b) && isfinite(c));
 
@@ -40,11 +48,12 @@ short int SolveSquare(double a, double b, double c, double *x1, double *x2) {
             }
             return 0;
         }
-        else {
+        else { // if b != 0
             *x1 = -c / b;
             return 1;
         }
-    } else { // 
+    }
+    else { // if a == 0 
         double discr = b * b - 4 * a * c;
         if (discr < 0) {
             return 0;
@@ -53,7 +62,8 @@ short int SolveSquare(double a, double b, double c, double *x1, double *x2) {
             *x1 = (-b) / (2 * a);
             *x2 = *x1;
             return 1;
-        } else {
+        }
+        else { // if discr > 0
             *x1 = (-b + sqrt(discr)) / (2 * a);
             *x2 = (-b - sqrt(discr)) / (2 * a);
             return 2;
@@ -62,39 +72,52 @@ short int SolveSquare(double a, double b, double c, double *x1, double *x2) {
     }
 }
 
-int main() {
-    double a = 0;
-    double b = 0;
-    double c = 0;
-    double x1 = 0;
-    double x2 = 0;
-    
-    
+/*!
+    * Функция ввода параметров квадратного уравнения
+    * \return 
+*/
+int InputParams(double* a/*!< - Указатель на старший кэффицент */, 
+    double* b/*!< - Указатель на коэффицент при x */, 
+    double* c/*!< - Указатель на свободный член */) {
+
+    assert(a != nullptr && b != nullptr && c != nullptr);
+
     printf("Example of entering an equation -5x^2 + 4*x - 3 \na: %lg \nb: %lg \nc: %i\n \n", -5.0, 3.25, -4);
     printf("a: ");
-    short int nInput_a = scanf("%lg",&a);
+    short int nInput_a = scanf("%lg", a);
     printf("b: ");
-    short int nInput_b = scanf("%lg", &b);
+    short int nInput_b = scanf("%lg", b);
     printf("c: ");
-    short int nInput_c = scanf("%lg", &c);
+    short int nInput_c = scanf("%lg", c);
     if (nInput_a != 1 && nInput_b != 1 && nInput_c != 1) {
-
-        exit(1);
+        printf("Something wrong in input/ Chtck input params");
+        return CODE_ERROR;
     }
 
-    short int nRoots = SolveSquare(a, b, c, &x1, &x2);
-    if (nRoots == 0) {
+    return 1;
+}
+
+/*!
+    * Функция вывода пезультатов решения квадратного уравнения
+    * \return 
+*/
+void OutputRoots(int* nRoots/*!< - Указатель на количество корней */, 
+    double* x1/*!< - Указатель на 1-ый корень */, 
+    double* x2/*!< - Указатель на 2-й корень */) {
+
+    assert(nRoots != nullptr && x1 != nullptr && x2 != nullptr);
+
+    if (*nRoots == 0) {
         printf("No Roots!");
     }
-    else if (nRoots == 1) {
-        printf("1 Root \n %lg", x1);
+    else if (*nRoots == 1) {
+        printf("1 Root \n %lg", *x1);
     }
-    else if (nRoots == 2) {
-        printf("2 Roots \n %lg \n %lg", x1, x2);
+    else if (*nRoots == 2) {
+        printf("2 Roots \n %lg \n %lg", *x1, *x2);
     }
     else {
         printf("Any Roots!");
     }
-
-    return 0;
+    return;
 }

@@ -1,0 +1,132 @@
+\hypertarget{_summer__school_8cpp}{}\doxysection{D\+:/vs\+\_\+project/\+Summer\+\_\+school/\+Summer\+\_\+school/\+Summer\+\_\+school.cpp File Reference}
+\label{_summer__school_8cpp}\index{D:/vs\_project/Summer\_school/Summer\_school/Summer\_school.cpp@{D:/vs\_project/Summer\_school/Summer\_school/Summer\_school.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_summer__school_8cpp_a95cea32eb87819297d8bf490e55eebff}{is\+\_\+equal}} (double, double)
+\item 
+int \mbox{\hyperlink{_summer__school_8cpp_a2d382fb3362c1b587083dc925d10aab7}{Solve\+Square}} (double, double, double, double $\ast$, double $\ast$)
+\item 
+void \mbox{\hyperlink{_summer__school_8cpp_ad26f3469411553e8139c3f419913b48f}{Input\+Params}} (double $\ast$, double $\ast$, double $\ast$)
+\item 
+void \mbox{\hyperlink{_summer__school_8cpp_a5663c5fd38763f06fcb2d581c0e74d40}{Output\+Roots}} (int $\ast$, double $\ast$, double $\ast$)
+\item 
+int \mbox{\hyperlink{_summer__school_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const short int \mbox{\hyperlink{_summer__school_8cpp_a7c708addc3b6d6585e92938918ac824a}{INF\+\_\+\+SOLVE}} = -\/1
+\begin{DoxyCompactList}\small\item\em Результат решения квадратного уравнения при бесконечном количестве корней. \end{DoxyCompactList}\item 
+const double \mbox{\hyperlink{_summer__school_8cpp_a596344e5a2992d2beec43b76a6294de0}{EPSILON}} = 1e-\/5
+\begin{DoxyCompactList}\small\item\em Погрешност при сравнении double. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_summer__school_8cpp_ad26f3469411553e8139c3f419913b48f}\label{_summer__school_8cpp_ad26f3469411553e8139c3f419913b48f}} 
+\index{Summer\_school.cpp@{Summer\_school.cpp}!InputParams@{InputParams}}
+\index{InputParams@{InputParams}!Summer\_school.cpp@{Summer\_school.cpp}}
+\doxysubsubsection{\texorpdfstring{InputParams()}{InputParams()}}
+{\footnotesize\ttfamily void Input\+Params (\begin{DoxyParamCaption}\item[{double $\ast$}]{a,  }\item[{double $\ast$}]{b,  }\item[{double $\ast$}]{c }\end{DoxyParamCaption})}
+
+Функция ввода параметров квадратного уравнения \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em a} & -\/ Указатель на старший кэффицент \\
+\hline
+{\em b} & -\/ Указатель на коэффицент при x \\
+\hline
+{\em c} & -\/ Указатель на свободный член \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_summer__school_8cpp_a95cea32eb87819297d8bf490e55eebff}\label{_summer__school_8cpp_a95cea32eb87819297d8bf490e55eebff}} 
+\index{Summer\_school.cpp@{Summer\_school.cpp}!is\_equal@{is\_equal}}
+\index{is\_equal@{is\_equal}!Summer\_school.cpp@{Summer\_school.cpp}}
+\doxysubsubsection{\texorpdfstring{is\_equal()}{is\_equal()}}
+{\footnotesize\ttfamily bool is\+\_\+equal (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y }\end{DoxyParamCaption})}
+
+Функция для проверки равенства переменных double типов. \begin{DoxyReturn}{Returns}
+true -\/ если числа равны 
+
+false -\/ если числа не равны 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & -\/ Первое число \\
+\hline
+{\em y} & -\/ Второе число \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_summer__school_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{_summer__school_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{Summer\_school.cpp@{Summer\_school.cpp}!main@{main}}
+\index{main@{main}!Summer\_school.cpp@{Summer\_school.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Решение квадратного уравнения \mbox{\Hypertarget{_summer__school_8cpp_a5663c5fd38763f06fcb2d581c0e74d40}\label{_summer__school_8cpp_a5663c5fd38763f06fcb2d581c0e74d40}} 
+\index{Summer\_school.cpp@{Summer\_school.cpp}!OutputRoots@{OutputRoots}}
+\index{OutputRoots@{OutputRoots}!Summer\_school.cpp@{Summer\_school.cpp}}
+\doxysubsubsection{\texorpdfstring{OutputRoots()}{OutputRoots()}}
+{\footnotesize\ttfamily void Output\+Roots (\begin{DoxyParamCaption}\item[{int $\ast$}]{n\+Roots,  }\item[{double $\ast$}]{x1,  }\item[{double $\ast$}]{x2 }\end{DoxyParamCaption})}
+
+Функция вывода пезультатов решения квадратного уравнения \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em n\+Roots} & -\/ Указатель на количество корней \\
+\hline
+{\em x1} & -\/ Указатель 1-\/ый корень \\
+\hline
+{\em x2} & -\/ Указатель на 2-\/й корень \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_summer__school_8cpp_a2d382fb3362c1b587083dc925d10aab7}\label{_summer__school_8cpp_a2d382fb3362c1b587083dc925d10aab7}} 
+\index{Summer\_school.cpp@{Summer\_school.cpp}!SolveSquare@{SolveSquare}}
+\index{SolveSquare@{SolveSquare}!Summer\_school.cpp@{Summer\_school.cpp}}
+\doxysubsubsection{\texorpdfstring{SolveSquare()}{SolveSquare()}}
+{\footnotesize\ttfamily int Solve\+Square (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b,  }\item[{double}]{c,  }\item[{double $\ast$}]{x1,  }\item[{double $\ast$}]{x2 }\end{DoxyParamCaption})}
+
+Функция для решения квадратного уравнения. \begin{DoxyReturn}{Returns}
+Количество корней 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em a} & -\/Коэффицент при старшей степени \\
+\hline
+{\em b} & -\/ Коэффицент при x \\
+\hline
+{\em c} & -\/ Свободный член \\
+\hline
+{\em x1} & -\/ Указатель для хранения 1-\/го корня \\
+\hline
+{\em x2} & -\/ Указатель для хранения 2-\/го корня \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_summer__school_8cpp_a596344e5a2992d2beec43b76a6294de0}\label{_summer__school_8cpp_a596344e5a2992d2beec43b76a6294de0}} 
+\index{Summer\_school.cpp@{Summer\_school.cpp}!EPSILON@{EPSILON}}
+\index{EPSILON@{EPSILON}!Summer\_school.cpp@{Summer\_school.cpp}}
+\doxysubsubsection{\texorpdfstring{EPSILON}{EPSILON}}
+{\footnotesize\ttfamily const double EPSILON = 1e-\/5}
+
+
+
+Погрешност при сравнении double. 
+
+\mbox{\Hypertarget{_summer__school_8cpp_a7c708addc3b6d6585e92938918ac824a}\label{_summer__school_8cpp_a7c708addc3b6d6585e92938918ac824a}} 
+\index{Summer\_school.cpp@{Summer\_school.cpp}!INF\_SOLVE@{INF\_SOLVE}}
+\index{INF\_SOLVE@{INF\_SOLVE}!Summer\_school.cpp@{Summer\_school.cpp}}
+\doxysubsubsection{\texorpdfstring{INF\_SOLVE}{INF\_SOLVE}}
+{\footnotesize\ttfamily const short int INF\+\_\+\+SOLVE = -\/1}
+
+
+
+Результат решения квадратного уравнения при бесконечном количестве корней. 
+

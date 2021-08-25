@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['solvesquare_0',['SolveSquare',['../_summer__school_8cpp.html#a2d382fb3362c1b587083dc925d10aab7',1,'Summer_school.cpp']]],
+  ['summer_5fschool_2ecpp_1',['Summer_school.cpp',['../_summer__school_8cpp.html',1,'']]]
+];

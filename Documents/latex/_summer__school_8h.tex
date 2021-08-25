@@ -17,11 +17,11 @@ void \mbox{\hyperlink{_summer__school_8h_a20923b07428ee0c38145bf3f532bde68}{Outp
 \begin{DoxyCompactItemize}
 \item 
 const int \mbox{\hyperlink{_summer__school_8h_aae18e29d8a539b6a6d41ba66b5faa5be}{INF\+\_\+\+SOLVE}} = -\/1
-\begin{DoxyCompactList}\small\item\em Результат решения квадратного уравнения при бесконечном количестве корней. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The result of solving a quadratic equation with an infinite number of roots. \end{DoxyCompactList}\item 
 const int \mbox{\hyperlink{_summer__school_8h_a726165c94a4580c0ecccc1dbabd5e9c6}{CODE\+\_\+\+ERROR}} = -\/9
 \item 
 const double \mbox{\hyperlink{_summer__school_8h_a596344e5a2992d2beec43b76a6294de0}{EPSILON}} = 1e-\/5
-\begin{DoxyCompactList}\small\item\em Погрешност при сравнении double. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Comparison error double. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
@@ -31,16 +31,16 @@ const double \mbox{\hyperlink{_summer__school_8h_a596344e5a2992d2beec43b76a6294d
 \doxysubsubsection{\texorpdfstring{InputParams()}{InputParams()}}
 {\footnotesize\ttfamily int Input\+Params (\begin{DoxyParamCaption}\item[{double $\ast$}]{a,  }\item[{double $\ast$}]{b,  }\item[{double $\ast$}]{c }\end{DoxyParamCaption})}
 
-Функция ввода параметров квадратного уравнения \begin{DoxyReturn}{Returns}
+Parameter input function for quadratic equation \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
 
 \begin{DoxyParams}{Parameters}
-{\em a} & -\/ Указатель на старший кэффицент \\
+{\em a} & -\/ Pointer to highest degree coefficient \\
 \hline
-{\em b} & -\/ Указатель на коэффицент при x \\
+{\em b} & -\/ Pointer to coefficient at x \\
 \hline
-{\em c} & -\/ Указатель на свободный член \\
+{\em c} & -\/ Pointer to free term pointer \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{_summer__school_8h_a8fbdf2aaa8257131a289c10f796ec25f}\label{_summer__school_8h_a8fbdf2aaa8257131a289c10f796ec25f}} 
@@ -49,16 +49,16 @@ const double \mbox{\hyperlink{_summer__school_8h_a596344e5a2992d2beec43b76a6294d
 \doxysubsubsection{\texorpdfstring{is\_equal()}{is\_equal()}}
 {\footnotesize\ttfamily bool is\+\_\+equal (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y }\end{DoxyParamCaption})}
 
-Функция для проверки равенства переменных double типов. \begin{DoxyReturn}{Returns}
-true -\/ если числа равны 
+Function for checking equality of variables of double types. \begin{DoxyReturn}{Returns}
+true -\/ if the numbers are equal 
 
-false -\/ если числа не равны 
+false -\/ if the numbers are not equal 
 \end{DoxyReturn}
 
 \begin{DoxyParams}{Parameters}
-{\em x} & -\/ Первое число \\
+{\em x} & -\/ First number \\
 \hline
-{\em y} & -\/ Второе число \\
+{\em y} & -\/ Second number \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{_summer__school_8h_a20923b07428ee0c38145bf3f532bde68}\label{_summer__school_8h_a20923b07428ee0c38145bf3f532bde68}} 
@@ -67,16 +67,16 @@ false -\/ если числа не равны
 \doxysubsubsection{\texorpdfstring{OutputRoots()}{OutputRoots()}}
 {\footnotesize\ttfamily void Output\+Roots (\begin{DoxyParamCaption}\item[{int $\ast$}]{n\+Roots,  }\item[{double $\ast$}]{x1,  }\item[{double $\ast$}]{x2 }\end{DoxyParamCaption})}
 
-Функция вывода пезультатов решения квадратного уравнения \begin{DoxyReturn}{Returns}
+Function for outputting the results of solving a quadratic equation \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
 
 \begin{DoxyParams}{Parameters}
-{\em n\+Roots} & -\/ Указатель на количество корней \\
+{\em n\+Roots} & -\/ Pointer to the number of roots \\
 \hline
-{\em x1} & -\/ Указатель на 1-\/ый корень \\
+{\em x1} & -\/ Pointer to 1st root \\
 \hline
-{\em x2} & -\/ Указатель на 2-\/й корень \\
+{\em x2} & -\/ Pointer to 2nd root \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{_summer__school_8h_ab2dd9b24e0e487efdd1cd1f40dd3a023}\label{_summer__school_8h_ab2dd9b24e0e487efdd1cd1f40dd3a023}} 
@@ -85,20 +85,20 @@ false -\/ если числа не равны
 \doxysubsubsection{\texorpdfstring{SolveSquare()}{SolveSquare()}}
 {\footnotesize\ttfamily int Solve\+Square (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b,  }\item[{double}]{c,  }\item[{double $\ast$}]{x1,  }\item[{double $\ast$}]{x2 }\end{DoxyParamCaption})}
 
-Функция для решения квадратного уравнения. \begin{DoxyReturn}{Returns}
-Количество корней 
+Function for solving a quadratic equation. \begin{DoxyReturn}{Returns}
+Number of roots 
 \end{DoxyReturn}
 
 \begin{DoxyParams}{Parameters}
-{\em a} & -\/Коэффицент при старшей степени \\
+{\em a} & -\/Highest degree coefficient \\
 \hline
-{\em b} & -\/ Коэффицент при x \\
+{\em b} & -\/ Coefficient at x \\
 \hline
-{\em c} & -\/ Свободный член \\
+{\em c} & -\/ Free member \\
 \hline
-{\em x1} & -\/ Указатель для хранения 1-\/го корня \\
+{\em x1} & -\/ Pointer for storing the 1st root \\
 \hline
-{\em x2} & -\/ Указатель для хранения 2-\/го корня \\
+{\em x2} & -\/ Pointer for storing the 2nd root \\
 \hline
 \end{DoxyParams}
 
@@ -118,7 +118,7 @@ false -\/ если числа не равны
 
 
 
-Погрешност при сравнении double. 
+Comparison error double. 
 
 \mbox{\Hypertarget{_summer__school_8h_aae18e29d8a539b6a6d41ba66b5faa5be}\label{_summer__school_8h_aae18e29d8a539b6a6d41ba66b5faa5be}} 
 \index{Summer\_school.h@{Summer\_school.h}!INF\_SOLVE@{INF\_SOLVE}}
@@ -128,5 +128,5 @@ false -\/ если числа не равны
 
 
 
-Результат решения квадратного уравнения при бесконечном количестве корней. 
+The result of solving a quadratic equation with an infinite number of roots. 
 

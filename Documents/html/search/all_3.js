@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['outputroots_0',['OutputRoots',['../_summer__school_8cpp.html#a5663c5fd38763f06fcb2d581c0e74d40',1,'Summer_school.cpp']]]
+  ['main_0',['main',['../_summer__school_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'Summer_school.cpp']]]
 ];

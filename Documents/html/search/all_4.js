@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['solvesquare_0',['SolveSquare',['../_summer__school_8cpp.html#a2d382fb3362c1b587083dc925d10aab7',1,'Summer_school.cpp']]],
-  ['summer_5fschool_2ecpp_1',['Summer_school.cpp',['../_summer__school_8cpp.html',1,'']]]
+  ['outputroots_0',['OutputRoots',['../_summer__school_8h.html#a20923b07428ee0c38145bf3f532bde68',1,'Summer_school.h']]]
 ];

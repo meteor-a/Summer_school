@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['inputparams_0',['InputParams',['../_summer__school_8cpp.html#ad26f3469411553e8139c3f419913b48f',1,'Summer_school.cpp']]],
-  ['is_5fequal_1',['is_equal',['../_summer__school_8cpp.html#a95cea32eb87819297d8bf490e55eebff',1,'Summer_school.cpp']]]
+  ['inputparams_0',['InputParams',['../_summer__school_8h.html#a74563d7d416a4339ef70e58a48aa0811',1,'Summer_school.h']]],
+  ['is_5fequal_1',['is_equal',['../_summer__school_8h.html#a8fbdf2aaa8257131a289c10f796ec25f',1,'Summer_school.h']]]
 ];

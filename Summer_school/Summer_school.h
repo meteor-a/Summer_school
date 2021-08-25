@@ -2,32 +2,32 @@
 #include <iostream>
 #include <cassert>
 /// <summary>
-/// Результат решения квадратного уравнения при бесконечном количестве корней.
+/// The result of solving a quadratic equation with an infinite number of roots.
 /// </summary>
 const int INF_SOLVE = -1;
 
 const int CODE_ERROR = -9;
 
 /// <summary>
-/// Погрешност при сравнении double.
+/// Comparison error double.
 /// </summary>
 const double EPSILON = 1e-5;
 
 /**
-    * Функция для проверки равенства переменных double типов.
-    * \return true - если числа равны
-    * \return false - если числа не равны
+    * Function for checking equality of variables of double types.
+    * \return true - if the numbers are equal
+    * \return false - if the numbers are not equal
 */
-bool is_equal(double x /*!< - Первое число*/, double y /*!< - Второе число */) {
+bool is_equal(double x /*!< - First number*/, double y /*!< - Second number */) {
     return fabs(x - y) < EPSILON;
 }
 
 /*!
-    * Функция для решения квадратного уравнения.
-    * \return Количество корней
+    * Function for solving a quadratic equation.
+    * \return Number of roots
 */
-int SolveSquare(double a /*!< -Коэффицент при старшей степени */, double b/*!< - Коэффицент при x*/,
-    double c/*!< - Свободный член */, double* x1/*!< - Указатель для хранения 1-го корня */, double* x2/*!< - Указатель для хранения 2-го корня */) {
+int SolveSquare(double a /*!< -Highest degree coefficient */, double b/*!< - Coefficient at x*/,
+    double c/*!< - Free member */, double* x1/*!< - Pointer for storing the 1st root */, double* x2/*!< - Pointer for storing the 2nd root */) {
 
     assert(x1 != nullptr && x2 != nullptr);
     assert(isfinite(a) && isfinite(b) && isfinite(c));
@@ -64,12 +64,12 @@ int SolveSquare(double a /*!< -Коэффицент при старшей степени */, double b/*!< -
 }
 
 /*!
-    * Функция ввода параметров квадратного уравнения
+    * Parameter input function for quadratic equation
     * \return
 */
-int InputParams(double* a/*!< - Указатель на старший кэффицент */,
-    double* b/*!< - Указатель на коэффицент при x */,
-    double* c/*!< - Указатель на свободный член */) {
+int InputParams(double* a/*!< - Pointer to highest degree coefficient */,
+    double* b/*!< - Pointer to coefficient at x*/,
+    double* c/*!< - Pointer to free term pointer */) {
 
     assert(a != nullptr && b != nullptr && c != nullptr);
 
@@ -89,12 +89,12 @@ int InputParams(double* a/*!< - Указатель на старший кэффицент */,
 }
 
 /*!
-    * Функция вывода пезультатов решения квадратного уравнения
+    * Function for outputting the results of solving a quadratic equation
     * \return
 */
-void OutputRoots(int* nRoots/*!< - Указатель на количество корней */,
-    double* x1/*!< - Указатель на 1-ый корень */,
-    double* x2/*!< - Указатель на 2-й корень */) {
+void OutputRoots(int* nRoots/*!< - Pointer to the number of roots */,
+    double* x1/*!< - Pointer to 1st root */,
+    double* x2/*!< - Pointer to 2nd root */) {
 
     assert(nRoots != nullptr && x1 != nullptr && x2 != nullptr);
 

@@ -1,7 +1,7 @@
 ﻿#include "Summer_school.h"
 
 /*!
-    * Решение квадратного уравнения
+    * Solving a quadratic equation
 */
 int main() {
     double a = 0;

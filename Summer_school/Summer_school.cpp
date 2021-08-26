@@ -28,7 +28,7 @@ bool is_equal(double x /*!< - First number*/, double y /*!< - Second number */) 
 }
 
 /*!
-    * Function for solving a quadratic equation.
+    * Function for solving a quadratic equation. If one root, it store result in both pointers.
     * \return Number of roots
 */
 int SolveEquation(double a /*!< - The highest coefficient */,
@@ -53,7 +53,7 @@ int SolveEquation(double a /*!< - The highest coefficient */,
             return 1;
         }
     }
-    else { // if a == 0 
+    else { // if a != 0 
         double discr = b * b - 4 * a * c;
         if (discr < 0) {
             return 0;
@@ -75,11 +75,14 @@ int SolveEquation(double a /*!< - The highest coefficient */,
 /*!
     * Parameter input function for quadratic equation
     * \return 1 - if all is ok.
-    * \return -9 - if something wrong.
 */
 int InputParams(double *a/*!< - Pointer to the highest coefficient */,
     double* b/*!< - Pointer to the x coefficient */,
     double* c/*!< - Poiner to free coefficient */) {
+
+    assert(a != nullptr);
+    assert(b != nullptr);
+    assert(c != nullptr);
 
     int nInput_a = 0;
     int nInput_b = 0;
@@ -120,8 +123,11 @@ void OutputRoots(int nRoots/*!< - Number of roots */,
     case 2:
         printf("2 Roots \n %lg \n %lg \n", x1, x2);
         break;
-    default:
+    case INF_SOLVE_:
         printf("Any Roots! \n");
+        break;
+    default:
+        printf("Error in number of roots. \n");
         break;
     }
 

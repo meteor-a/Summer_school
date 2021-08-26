@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getroots_0',['getRoots',['../class_quadratic_equation.html#a23560349c852b3e7eb902bb0c71044d4',1,'QuadraticEquation']]]
+  ['code_5ferror_5f_0',['CODE_ERROR_',['../_summer__school_8h.html#a6113172916f14cf4eaac7222a35be13c',1,'Summer_school.h']]]
 ];

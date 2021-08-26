@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['inputparams_0',['InputParams',['../class_quadratic_equation.html#a93bfb8c05f6b0510bcb43f8f98b506f0',1,'QuadraticEquation']]],
-  ['is_5fequal_1',['is_equal',['../class_quadratic_equation.html#a4925d42e89a9d3e0cb28008518b7091e',1,'QuadraticEquation']]]
+  ['main_0',['main',['../_summer__school_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'Summer_school.cpp']]]
 ];

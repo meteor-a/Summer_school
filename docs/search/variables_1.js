@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['epsilon_0',['EPSILON',['../_summer__school_8h.html#a596344e5a2992d2beec43b76a6294de0',1,'Summer_school.h']]]
+  ['epsilon_5f_0',['EPSILON_',['../_summer__school_8h.html#abcef13a7ae08baf0ac0c21b124e23a06',1,'Summer_school.h']]]
 ];

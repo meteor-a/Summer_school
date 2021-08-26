@@ -45,8 +45,11 @@ namespace Tests
                 Assert::AreEqual(nRoots, nRoots_test);
                 if (nRoots == 1) {
                     Assert::IsTrue(quadr_eq.is_equal(x1,x1_test));
-                } else {
+                } else if (nRoots == 2) {
                     Assert::IsTrue(quadr_eq.is_equal(x1, x1_test) && quadr_eq.is_equal(x2,x2_test));
+                }
+                else if (nRoots != 0) {
+                    Assert::Fail();
                 }
 
             }

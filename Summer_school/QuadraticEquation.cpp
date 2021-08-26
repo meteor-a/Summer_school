@@ -48,10 +48,7 @@ int QuadraticEquation::SolveEquation_(double* x1/*!< - Pointer for storing the 1
 
     if (is_equal(a_, 0)) {
         if (is_equal(b_, 0)) {
-            if (is_equal(c_, 0)) {
-                return INF_SOLVE_;
-            }
-            return 0;
+            return is_equal(c_, 0) ? INF_SOLVE_ : 0;
         }
         else { // if b != 0
             *x1 = -c_ / b_;
@@ -109,18 +106,21 @@ void QuadraticEquation::OutputRoots() {
     double x2 = 0;
     int nRoots = SolveEquation_(&x1, &x2);
 
-    if (nRoots == 0) {
+    switch (nRoots) {
+    case 0:
         printf("No Roots!");
-    }
-    else if (nRoots == 1) {
+        break;
+    case 1:
         printf("1 Root \n %lg", x1);
-    }
-    else if (nRoots == 2) {
+        break;
+    case 2:
         printf("2 Roots \n %lg \n %lg", x1, x2);
-    }
-    else {
+        break;
+    default:
         printf("Any Roots!");
+        break;
     }
+
     return;
 }
 

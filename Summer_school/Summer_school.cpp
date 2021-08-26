@@ -30,9 +30,9 @@ bool is_equal(double x /*!< - First number*/, double y /*!< - Second number */) 
     * Function for solving a quadratic equation.
     * \return Number of roots
 */
-int SolveEquation(double a, 
-    double b, 
-    double c, 
+int SolveEquation(double a /*!< - The highest coefficient */,
+    double b /*!< - The x coefficient*/,
+    double c /*!< - Free coefficent*/,
     double* x1/*!< - Pointer for storing the 1st root */, 
     double* x2/*!< - Pointer for storing the 2nd root */) {
 
@@ -76,7 +76,10 @@ int SolveEquation(double a,
     * \return 1 - if all is ok.
     * \return -9 - if something wrong.
 */
-int InputParams(double *a, double* b, double* c) {
+int InputParams(double *a/*!< - Pointer to the highest coefficient */,
+    double* b/*!< - Pointer to the x coefficient */,
+    double* c/*!< - Poiner to free coefficient */) {
+
     int nInput_a = 0;
     int nInput_b = 0;
     int nInput_c = 0;
@@ -103,7 +106,9 @@ int InputParams(double *a, double* b, double* c) {
     * Function for outputting the results of solving a quadratic equation
     * \return
 */
-void OutputRoots(int nRoots, double x1, double x2) {
+void OutputRoots(int nRoots/*!< - Number of roots */,
+    double x1/*!< - First root */,
+    double x2/*!< - Second root */) {
     switch (nRoots) {
     case 0:
         printf("No Roots! \n");

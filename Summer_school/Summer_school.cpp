@@ -1,5 +1,11 @@
 ﻿#include "Summer_school.h"
 
+/*! \mainpage SolveEquation
+ * This project was created to automate the solution of the quadratic equation
+ * in the framework of the MIPT summer school (1 course). The program is designed 
+ * to find valid roots.
+ */
+
 /*!
     * Solving a quadratic equation
 */
@@ -23,7 +29,9 @@ int main() {
     * \return true - if the numbers are equal
     * \return false - if the numbers are not equal
 */
-bool is_equal(double x /*!< - First number*/, double y /*!< - Second number */) {
+bool is_equal(double x /*!< - First number*/, 
+              double y /*!< - Second number */) {
+
     return fabs(x - y) < EPSILON_;
 }
 
@@ -32,10 +40,10 @@ bool is_equal(double x /*!< - First number*/, double y /*!< - Second number */) 
     * \return Number of roots
 */
 int SolveEquation(double a /*!< - The highest coefficient */,
-    double b /*!< - The x coefficient*/,
-    double c /*!< - Free coefficent*/,
-    double* x1/*!< - Pointer for storing the 1st root */, 
-    double* x2/*!< - Pointer for storing the 2nd root */) {
+    double b               /*!< - The x coefficient*/,
+    double c               /*!< - Free coefficent*/,
+    double* x1             /*!< - Pointer for storing the 1st root */, 
+    double* x2             /*!< - Pointer for storing the 2nd root */) {
 
     assert(x1 != nullptr);
     assert(x2 != nullptr);
@@ -76,9 +84,9 @@ int SolveEquation(double a /*!< - The highest coefficient */,
     * Parameter input function for quadratic equation
     * \return 1 - if all is ok.
 */
-int InputParams(double *a/*!< - Pointer to the highest coefficient */,
-    double* b/*!< - Pointer to the x coefficient */,
-    double* c/*!< - Poiner to free coefficient */) {
+int InputParams(double* a /*!< - Pointer to the highest coefficient */,
+                double* b /*!< - Pointer to the x coefficient */,
+                double* c /*!< - Poiner to free coefficient */) {
 
     assert(a != nullptr);
     assert(b != nullptr);
@@ -90,16 +98,23 @@ int InputParams(double *a/*!< - Pointer to the highest coefficient */,
 
     bool res = false;
     do {
-        printf("Example of entering an equation -5x^2 + 4*x - 3 \na: %lg \nb: %lg \nc: %i\n \n", -5.0, 3.25, -4);
+        printf("Example of entering an equation -5x^2 + 4*x - 3\n"
+               "a: %lg\n"
+               "b: %lg\n"
+               "c: %i\n\n", -5.0, 3.25, -4);
+        
         printf("a: ");
         nInput_a = scanf("%lg", a);
+        
         printf("b: ");
         nInput_b = scanf("%lg", b);
+        
         printf("c: ");
         nInput_c = scanf("%lg", c);
+        
         res = nInput_a != 1 && nInput_b != 1 && nInput_c != 1;
         if (res) {
-            printf("Something wrong in input/ Check input params \n");
+            printf("Something wrong in input. Check input params.\n");
         }
     } while (res);
 
@@ -111,23 +126,27 @@ int InputParams(double *a/*!< - Pointer to the highest coefficient */,
     * \return
 */
 void OutputRoots(int nRoots/*!< - Number of roots */,
-    double x1/*!< - First root */,
-    double x2/*!< - Second root */) {
+                 double x1/*!< - First root */,
+                 double x2/*!< - Second root */) {
+
     switch (nRoots) {
     case 0:
-        printf("No Roots! \n");
+        printf("No Roots!\n");
         break;
     case 1:
-        printf("1 Root \n %lg \n", x1);
+        printf("1 Root\n" 
+               "%lg\n", x1);
         break;
     case 2:
-        printf("2 Roots \n %lg \n %lg \n", x1, x2);
+        printf("2 Roots\n" 
+               "%lg\n" 
+               "%lg\n", x1, x2);
         break;
     case INF_SOLVE_:
-        printf("Any Roots! \n");
+        printf("Any Roots!\n");
         break;
     default:
-        printf("Error in number of roots. \n");
+        printf("Error in number of roots.\n");
         break;
     }
 

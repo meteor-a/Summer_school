@@ -14,8 +14,7 @@ namespace Tests
 	{
 	public:
 		TEST_METHOD(TestInput) {
-            std::ifstream file("C:\\Users\\Maxim\\source\\repos\\Summer_school\\Tests\\Tests\\DataInputTests.txt");
-
+            std::ifstream file("C:\\vs_projects\\Summer_school\\Tests\\Tests\\DataInputTests.txt");
             if (!file.is_open()) {
                 Assert::Fail();
             }

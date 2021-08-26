@@ -1,4 +1,4 @@
 var files_dup =
 [
-    [ "source", "dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html", "dir_b2f33c71d4aa5e7af42a1ca61ff5af1b" ]
+    [ "Summer_school", "dir_3ac785c9b1d0cf20f4301f902eb5396e.html", "dir_3ac785c9b1d0cf20f4301f902eb5396e" ]
 ];

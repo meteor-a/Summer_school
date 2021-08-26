@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "Equation", "index.html", [
+    [ "SolveEquation", "index.html", null ],
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [

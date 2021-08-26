@@ -139,11 +139,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="QuadraticEquation.cpp" />
     <ClCompile Include="Summer_school.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="QuadraticEquation.h" />
+    <ClInclude Include="Summer_school.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

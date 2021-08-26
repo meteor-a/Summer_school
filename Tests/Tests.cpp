@@ -1,6 +1,6 @@
 #include "pch.h"
 #include "CppUnitTest.h"
-#include "..\Summer_school\QuadraticEquation.h"
+#include "../Summer_school/Summer_school.h"
 #include <fstream>
 #include <cstdlib>
 #include <math.h> 
@@ -39,14 +39,14 @@ namespace Tests
                 double x1 = 0;
                 double x2 = 0;
 
-                QuadraticEquation quadr_eq(a_test, b_test, c_test);
-                int nRoots = quadr_eq.getRoots(&x1, &x2);
+                int nRoots = SolveEquation(a_test, b_test, c_test, &x1, &x2);
 
                 Assert::AreEqual(nRoots, nRoots_test);
                 if (nRoots == 1) {
-                    Assert::IsTrue(quadr_eq.is_equal(x1,x1_test));
+                    Assert::IsTrue(is_equal(x1,x1_test));
                 } else if (nRoots == 2) {
-                    Assert::IsTrue(quadr_eq.is_equal(x1, x1_test) && quadr_eq.is_equal(x2,x2_test));
+                    Assert::IsTrue(is_equal(x1, x1_test));
+                    Assert::IsTrue(is_equal(x2, x2_test));
                 }
                 else if (nRoots != 0) {
                     Assert::Fail();

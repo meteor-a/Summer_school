@@ -18,12 +18,9 @@
     <ClCompile Include="Summer_school.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="QuadraticEquation.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="QuadraticEquation.h">
+    <ClInclude Include="Summer_school.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,0 +1,138 @@
+\hypertarget{_summer__school_8h}{}\doxysection{C\+:/\+Users/\+Maxim/source/repos/\+Summer\+\_\+school/\+Summer\+\_\+school/\+Summer\+\_\+school.h File Reference}
+\label{_summer__school_8h}\index{C:/Users/Maxim/source/repos/Summer\_school/Summer\_school/Summer\_school.h@{C:/Users/Maxim/source/repos/Summer\_school/Summer\_school/Summer\_school.h}}
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_summer__school_8h_a95cea32eb87819297d8bf490e55eebff}{is\+\_\+equal}} (double, double)
+\item 
+int \mbox{\hyperlink{_summer__school_8h_a08d56bb031f53d366b52fb34a3ae8f5a}{Solve\+Equation}} (double, double, double, double $\ast$, double $\ast$)
+\item 
+int \mbox{\hyperlink{_summer__school_8h_a78e1d5c92a26d7c37dadd5c3fe052e80}{Input\+Params}} (double $\ast$, double $\ast$, double $\ast$)
+\item 
+void \mbox{\hyperlink{_summer__school_8h_a1dd0b67a426eeca810fe91c264c19190}{Output\+Roots}} (int, double, double)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{_summer__school_8h_a9197f5cbe441f87d049eb44dc250be03}{INF\+\_\+\+SOLVE\+\_\+}} = -\/1
+\item 
+const int \mbox{\hyperlink{_summer__school_8h_a6113172916f14cf4eaac7222a35be13c}{CODE\+\_\+\+ERROR\+\_\+}} = -\/9
+\item 
+const double \mbox{\hyperlink{_summer__school_8h_abcef13a7ae08baf0ac0c21b124e23a06}{EPSILON\+\_\+}} = 1e-\/5
+\begin{DoxyCompactList}\small\item\em Comparison error double. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_summer__school_8h_a78e1d5c92a26d7c37dadd5c3fe052e80}\label{_summer__school_8h_a78e1d5c92a26d7c37dadd5c3fe052e80}} 
+\index{Summer\_school.h@{Summer\_school.h}!InputParams@{InputParams}}
+\index{InputParams@{InputParams}!Summer\_school.h@{Summer\_school.h}}
+\doxysubsubsection{\texorpdfstring{InputParams()}{InputParams()}}
+{\footnotesize\ttfamily int Input\+Params (\begin{DoxyParamCaption}\item[{double $\ast$}]{a,  }\item[{double $\ast$}]{b,  }\item[{double $\ast$}]{c }\end{DoxyParamCaption})}
+
+Parameter input function for quadratic equation \begin{DoxyReturn}{Returns}
+1 -\/ if all is ok. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em a} & -\/ Pointer to the highest coefficient \\
+\hline
+{\em b} & -\/ Pointer to the x coefficient \\
+\hline
+{\em c} & -\/ Poiner to free coefficient \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_summer__school_8h_a95cea32eb87819297d8bf490e55eebff}\label{_summer__school_8h_a95cea32eb87819297d8bf490e55eebff}} 
+\index{Summer\_school.h@{Summer\_school.h}!is\_equal@{is\_equal}}
+\index{is\_equal@{is\_equal}!Summer\_school.h@{Summer\_school.h}}
+\doxysubsubsection{\texorpdfstring{is\_equal()}{is\_equal()}}
+{\footnotesize\ttfamily bool is\+\_\+equal (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y }\end{DoxyParamCaption})}
+
+Function for checking equality of variables of double types. \begin{DoxyReturn}{Returns}
+true -\/ if the numbers are equal 
+
+false -\/ if the numbers are not equal 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & -\/ First number \\
+\hline
+{\em y} & -\/ Second number \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_summer__school_8h_a1dd0b67a426eeca810fe91c264c19190}\label{_summer__school_8h_a1dd0b67a426eeca810fe91c264c19190}} 
+\index{Summer\_school.h@{Summer\_school.h}!OutputRoots@{OutputRoots}}
+\index{OutputRoots@{OutputRoots}!Summer\_school.h@{Summer\_school.h}}
+\doxysubsubsection{\texorpdfstring{OutputRoots()}{OutputRoots()}}
+{\footnotesize\ttfamily void Output\+Roots (\begin{DoxyParamCaption}\item[{int}]{n\+Roots,  }\item[{double}]{x1,  }\item[{double}]{x2 }\end{DoxyParamCaption})}
+
+Function for outputting the results of solving a quadratic equation \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em n\+Roots} & -\/ Number of roots \\
+\hline
+{\em x1} & -\/ First root \\
+\hline
+{\em x2} & -\/ Second root \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_summer__school_8h_a08d56bb031f53d366b52fb34a3ae8f5a}\label{_summer__school_8h_a08d56bb031f53d366b52fb34a3ae8f5a}} 
+\index{Summer\_school.h@{Summer\_school.h}!SolveEquation@{SolveEquation}}
+\index{SolveEquation@{SolveEquation}!Summer\_school.h@{Summer\_school.h}}
+\doxysubsubsection{\texorpdfstring{SolveEquation()}{SolveEquation()}}
+{\footnotesize\ttfamily int Solve\+Equation (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b,  }\item[{double}]{c,  }\item[{double $\ast$}]{x1,  }\item[{double $\ast$}]{x2 }\end{DoxyParamCaption})}
+
+Function for solving a quadratic equation. If one root, it store result in both pointers. \begin{DoxyReturn}{Returns}
+Number of roots 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em a} & -\/ The highest coefficient \\
+\hline
+{\em b} & -\/ The x coefficient \\
+\hline
+{\em c} & -\/ Free coefficent \\
+\hline
+{\em x1} & -\/ Pointer for storing the 1st root \\
+\hline
+{\em x2} & -\/ Pointer for storing the 2nd root \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_summer__school_8h_a6113172916f14cf4eaac7222a35be13c}\label{_summer__school_8h_a6113172916f14cf4eaac7222a35be13c}} 
+\index{Summer\_school.h@{Summer\_school.h}!CODE\_ERROR\_@{CODE\_ERROR\_}}
+\index{CODE\_ERROR\_@{CODE\_ERROR\_}!Summer\_school.h@{Summer\_school.h}}
+\doxysubsubsection{\texorpdfstring{CODE\_ERROR\_}{CODE\_ERROR\_}}
+{\footnotesize\ttfamily const int CODE\+\_\+\+ERROR\+\_\+ = -\/9}
+
+
+
+
+
+\mbox{\Hypertarget{_summer__school_8h_abcef13a7ae08baf0ac0c21b124e23a06}\label{_summer__school_8h_abcef13a7ae08baf0ac0c21b124e23a06}} 
+\index{Summer\_school.h@{Summer\_school.h}!EPSILON\_@{EPSILON\_}}
+\index{EPSILON\_@{EPSILON\_}!Summer\_school.h@{Summer\_school.h}}
+\doxysubsubsection{\texorpdfstring{EPSILON\_}{EPSILON\_}}
+{\footnotesize\ttfamily const double EPSILON\+\_\+ = 1e-\/5}
+
+
+
+Comparison error double. 
+
+\mbox{\Hypertarget{_summer__school_8h_a9197f5cbe441f87d049eb44dc250be03}\label{_summer__school_8h_a9197f5cbe441f87d049eb44dc250be03}} 
+\index{Summer\_school.h@{Summer\_school.h}!INF\_SOLVE\_@{INF\_SOLVE\_}}
+\index{INF\_SOLVE\_@{INF\_SOLVE\_}!Summer\_school.h@{Summer\_school.h}}
+\doxysubsubsection{\texorpdfstring{INF\_SOLVE\_}{INF\_SOLVE\_}}
+{\footnotesize\ttfamily const int INF\+\_\+\+SOLVE\+\_\+ = -\/1}
+
+
+
+
+
+The result of solving a quadratic equation with an infinite number of roots. 

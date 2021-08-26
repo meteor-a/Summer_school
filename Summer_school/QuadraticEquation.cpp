@@ -92,7 +92,7 @@ int QuadraticEquation::InputParams() {
     if (nInput_a != 1 && nInput_b != 1 && nInput_c != 1) {
         printf("Something wrong in input/ Check input params");
         return CODE_ERROR_;
-    }
+    } // while 
 
     return 1;
 }

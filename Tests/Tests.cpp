@@ -3,6 +3,7 @@
 #include "../Summer_school/Summer_school.h"
 #include <fstream>
 #include <cstdlib>
+#include <iostream>
 #include <math.h> 
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
@@ -14,6 +15,7 @@ namespace Tests
 	public:
 		TEST_METHOD(TestInput) {
             std::ifstream file("C:\\Users\\Maxim\\source\\repos\\Summer_school\\Tests\\Tests\\DataInputTests.txt");
+
             if (!file.is_open()) {
                 Assert::Fail();
             }

@@ -15,6 +15,7 @@ int main() {
     int nRoots = SolveEquation(a, b, c, &x1, &x2);
 
     OutputRoots(nRoots, x1, x2);
+    return 1;
 }
 
 /**

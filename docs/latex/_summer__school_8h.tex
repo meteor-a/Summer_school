@@ -34,8 +34,6 @@ const double \mbox{\hyperlink{_summer__school_8h_abcef13a7ae08baf0ac0c21b124e23a
 
 Parameter input function for quadratic equation \begin{DoxyReturn}{Returns}
 1 -\/ if all is ok. 
-
--\/9 -\/ if something wrong. 
 \end{DoxyReturn}
 
 \begin{DoxyParams}{Parameters}
@@ -88,7 +86,7 @@ Function for outputting the results of solving a quadratic equation \begin{DoxyR
 \doxysubsubsection{\texorpdfstring{SolveEquation()}{SolveEquation()}}
 {\footnotesize\ttfamily int Solve\+Equation (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b,  }\item[{double}]{c,  }\item[{double $\ast$}]{x1,  }\item[{double $\ast$}]{x2 }\end{DoxyParamCaption})}
 
-Function for solving a quadratic equation. \begin{DoxyReturn}{Returns}
+Function for solving a quadratic equation. If one root, it store result in both pointers. \begin{DoxyReturn}{Returns}
 Number of roots 
 \end{DoxyReturn}
 

@@ -51,7 +51,6 @@ namespace Tests
                 else if (nRoots != 0) {
                     Assert::Fail();
                 }
-
             }
 		}
 	};

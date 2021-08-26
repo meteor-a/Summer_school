@@ -44,6 +44,7 @@ bool QuadraticEquation::is_equal(double x /*!< - First number*/, double y /*!< -
 int QuadraticEquation::SolveEquation_(double* x1/*!< - Pointer for storing the 1st root */, double* x2/*!< - Pointer for storing the 2nd root */) {
 
     assert(x1 != nullptr && x2 != nullptr);
+    assert(x1 != x2);
     assert(isfinite(a_) && isfinite(b_) && isfinite(c_));
 
     if (is_equal(a_, 0)) {
@@ -132,5 +133,6 @@ int QuadraticEquation::getRoots(double* x1 /*!< - Pointer for storing the 1st ro
     double* x2/*!< - Pointer for storing the 2nd root */) {
 
     assert(x1 != nullptr && x2 != nullptr);
+    assert(x1 != x2);
     return SolveEquation_(x1, x2);
 }

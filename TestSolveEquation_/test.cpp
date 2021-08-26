@@ -1,5 +1,5 @@
 #include "pch.h"
-#include "../Summer_school/Summer_school.h"
+#include "../Summer_school/QuadraticEquation.h"
 #include <fstream>
 #include <cstdlib>
 #include <math.h> 
@@ -9,7 +9,7 @@ TEST(TestCaseName, TestName) {
     EXPECT_TRUE(true);
     std::ifstream file("D:\\vs_project\\Summer_school\\TestSolveEquation_\\Tests\\DataInputTests.txt");
     if (!file.is_open()) {
-        int tt = 0;
+        EXPECT_EQ(1, 2);
     }
     int num_of_tests = 0;
     file >> num_of_tests;
@@ -32,14 +32,16 @@ TEST(TestCaseName, TestName) {
 
         double x1 = 0;
         double x2 = 0;
-        int nRoots = SolveSquare(a_test, b_test, c_test, &x1, &x2);
+        
+        QuadraticEquation quadr_eq(a_test, b_test, c_test);
+        int nRoots = quadr_eq.getRoots(&x1, &x2);
 
         EXPECT_EQ(nRoots, nRoots_test);
         if (nRoots == 1) {
-            EXPECT_TRUE(is_equal(x1, x1_test));
+            EXPECT_TRUE(quadr_eq.is_equal(x1, x1_test));
         }
         else {
-            EXPECT_TRUE(is_equal(x1, x1_test) && is_equal(x2, x2_test));
+            EXPECT_TRUE(quadr_eq.is_equal(x1, x1_test) && quadr_eq.is_equal(x2, x2_test));
         }
         
     }

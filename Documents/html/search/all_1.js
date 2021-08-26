@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['epsilon_0',['EPSILON',['../_summer__school_8h.html#a596344e5a2992d2beec43b76a6294de0',1,'Summer_school.h']]]
+  ['inputparams_0',['InputParams',['../class_quadratic_equation.html#a93bfb8c05f6b0510bcb43f8f98b506f0',1,'QuadraticEquation']]],
+  ['is_5fequal_1',['is_equal',['../class_quadratic_equation.html#a4925d42e89a9d3e0cb28008518b7091e',1,'QuadraticEquation']]]
 ];

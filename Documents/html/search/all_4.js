@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['outputroots_0',['OutputRoots',['../_summer__school_8h.html#a20923b07428ee0c38145bf3f532bde68',1,'Summer_school.h']]]
+  ['_7equadraticequation_0',['~QuadraticEquation',['../class_quadratic_equation.html#a16dcf4de9fb30312e2d5b19c9e30eb00',1,'QuadraticEquation']]]
 ];

@@ -1,6 +1,6 @@
 #include "pch.h"
 #include "CppUnitTest.h"
-#include "..\\Summer_school\\QuadraticEquation.h"
+#include "..\Summer_school\QuadraticEquation.h"
 #include <fstream>
 #include <cstdlib>
 #include <math.h> 
@@ -13,9 +13,9 @@ namespace Tests
 	{
 	public:
 		TEST_METHOD(TestInput) {
-            std::ifstream file("C:\\Users\\Maxim\\source\\repos\\Summer_school\\TestsTests\\Tests\\DataInputTests.txt");
+            std::ifstream file("C:\\Users\\Maxim\\source\\repos\\Summer_school\\Tests\\Tests\\DataInputTests.txt");
             if (!file.is_open()) {
-                
+                Assert::Fail();
             }
             int num_of_tests = 0;
             file >> num_of_tests;
@@ -42,11 +42,12 @@ namespace Tests
                 QuadraticEquation quadr_eq(a_test, b_test, c_test);
                 int nRoots = quadr_eq.getRoots(&x1, &x2);
 
-                //if (nRoots == 1) {
-                    
-                //} else {
-                    
-               // }
+                Assert::AreEqual(nRoots, nRoots_test);
+                if (nRoots == 1) {
+                    Assert::IsTrue(quadr_eq.is_equal(x1,x1_test));
+                } else {
+                    Assert::IsTrue(quadr_eq.is_equal(x1, x1_test) && quadr_eq.is_equal(x2,x2_test));
+                }
 
             }
 		}
